@@ -9,6 +9,8 @@ https://github.com/riadi-1/DBMachine/assets/130598901/cf3997ad-5d00-40c9-ab88-ea
 
 
 ***************************************** ScreenShots 
+
+
 ==> Gestion Machine :
 1- Ajoute Machine :
 
