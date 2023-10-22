@@ -88,13 +88,10 @@ Results :
 Ex : cc1 (machines)
 
 
-
 ![find1](https://github.com/riadi-1/DBMachine/assets/130598901/c4e8ecb3-902a-4f62-9de8-a9e0b1918a9b)
 
 
-
 Ex : cc2 (machines)
-
 
 
 ![find2](https://github.com/riadi-1/DBMachine/assets/130598901/cc3e6295-8b81-4d71-9de3-963b6c4769b9)
