@@ -82,6 +82,8 @@ Results :
 
 ![suppremer1](https://github.com/riadi-1/DBMachine/assets/130598901/9803623f-634e-449a-b484-ccd939dcea34)
 
+==> Gestion Machine par Salles  :
+
 
 7- Find Machines par salles :
 
