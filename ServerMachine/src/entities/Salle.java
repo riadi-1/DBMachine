@@ -26,14 +26,12 @@ public class Salle implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String code;
-    private Machine ma;
 
     public Salle() {
     }
 
-    public Salle(String code, Machine ma) {
+    public Salle(String code) {
         this.code = code;
-        this.ma = ma;
     }
 
     public int getId() {
@@ -52,17 +50,11 @@ public class Salle implements Serializable {
         this.code = code;
     }
 
-    public Machine getMa() {
-        return ma;
-    }
 
-    public void setMa(Machine ma) {
-        this.ma = ma;
-    }
 
     @Override
     public String toString() {
-        return "Salle{" + "id=" + id + ", code=" + code + "Machine=" + ma + '}';
+        return "Salle{" + "id=" + id + ", code=" + code + '}';
     }
 
 }

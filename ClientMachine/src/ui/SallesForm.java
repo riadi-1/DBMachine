@@ -39,22 +39,22 @@ public class SallesForm extends javax.swing.JInternalFrame {
                 models.addRow(new Object[]{
                     s.getId(),
                     s.getCode(),
-                    s.getMa(),});
+                    });
             }
         } catch (RemoteException ex) {
             Logger.getLogger(SallesForm.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    public void loadMachines() {
-        try {
-            for (Machine m : dao.findAll()) {
-                listeMachines.addItem(m);
-            }
-        } catch (RemoteException ex) {
-            Logger.getLogger(SallesForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//    public void loadMachines() {
+//        try {
+//            for (Machine m : dao.findAll()) {
+//                listeMachines.addItem(m);
+//            }
+//        } catch (RemoteException ex) {
+//            Logger.getLogger(SallesForm.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
     public SallesForm() {
         initComponents();
@@ -71,7 +71,7 @@ public class SallesForm extends javax.swing.JInternalFrame {
 
         models = (DefaultTableModel) listSalles.getModel();
 
-        loadMachines();
+//        loadMachines();
         loads();
     }
 
@@ -88,8 +88,6 @@ public class SallesForm extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtCode = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        listeMachines = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
         bnAdd = new javax.swing.JButton();
         bnUpdate = new javax.swing.JButton();
@@ -110,23 +108,15 @@ public class SallesForm extends javax.swing.JInternalFrame {
 
         jLabel1.setText("code : ");
 
-        jLabel2.setText("Machines :");
-
-        listeMachines.setMaximumRowCount(4);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCode, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                    .addComponent(listeMachines, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(49, 49, 49)
+                .addComponent(txtCode, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -136,10 +126,6 @@ public class SallesForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(listeMachines, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -177,7 +163,7 @@ public class SallesForm extends javax.swing.JInternalFrame {
                     .addComponent(bnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,7 +185,7 @@ public class SallesForm extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "code", "machine"
+                "ID", "code"
             }
         ));
         listSalles.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -230,9 +216,9 @@ public class SallesForm extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
+                        .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -248,8 +234,6 @@ public class SallesForm extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getAccessibleContext().setAccessibleName("G Salles");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -257,9 +241,9 @@ public class SallesForm extends javax.swing.JInternalFrame {
         try {
             // TODO add your handling code here:
             String code = txtCode.getText().toString();
-            Machine ma = (Machine) listeMachines.getSelectedItem();
-            if (daos.create(new Salle(code, ma))) {
-                JOptionPane.showMessageDialog(this, "Machine bien ajouter");
+//            Machine ma = (Machine) listeMachines.getSelectedItem();
+            if (daos.create(new Salle(code))) {
+                JOptionPane.showMessageDialog(this, "Salle bien ajouter");
                 loads();
             }
         } catch (RemoteException ex) {
@@ -276,14 +260,13 @@ public class SallesForm extends javax.swing.JInternalFrame {
 
             int id = (int) models.getValueAt(selectedRow, 0);
             String code = txtCode.getText();
-            Machine ma = (Machine) listeMachines.getSelectedItem();
+//            Machine ma = (Machine) listeMachines.getSelectedItem();
             Salle existingSalle = daos.findById(id);
 
             if (existingSalle != null) {
                 existingSalle.setCode(code);
-                existingSalle.setMa(ma);
                 if (daos.update(existingSalle)) {
-                    JOptionPane.showMessageDialog(this, "Machine bien modifie");
+                    JOptionPane.showMessageDialog(this, "Salle bien modifie");
                     loads();
                 }
             }
@@ -296,7 +279,7 @@ public class SallesForm extends javax.swing.JInternalFrame {
         try {
             int id = (int) models.getValueAt(listSalles.getSelectedRow(), 0);
             if (daos.delete(daos.findById(id))) {
-                JOptionPane.showMessageDialog(this, "Machine bien supprimer");
+                JOptionPane.showMessageDialog(this, "Salle bien supprimer");
                 loads();
             }
         } catch (RemoteException ex) {
@@ -306,7 +289,6 @@ public class SallesForm extends javax.swing.JInternalFrame {
 
     private void listSallesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listSallesMouseClicked
         txtCode.setText(models.getValueAt(listSalles.getSelectedRow(), 1).toString());
-        listeMachines.getModel().setSelectedItem(models.getValueAt(listSalles.getSelectedRow(), 2).toString());
     }//GEN-LAST:event_listSallesMouseClicked
 
 
@@ -315,14 +297,12 @@ public class SallesForm extends javax.swing.JInternalFrame {
     private javax.swing.JButton bnDelete;
     private javax.swing.JButton bnUpdate;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTable listSalles;
-    private javax.swing.JComboBox listeMachines;
     private javax.swing.JTextField txtCode;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,14 +16,12 @@ import java.io.Serializable;
 public class Salle  implements Serializable {
     private int id;
     private String code;
-    private Machine ma;
     
     public Salle(){
     }
     
-     public Salle(String code, Machine ma) {
+     public Salle(String code) {
         this.code = code;
-        this.ma=ma;
     }
 
     public int getId() {
@@ -42,17 +40,9 @@ public class Salle  implements Serializable {
         this.code = code;
     }
     
-    public Machine getMa() {
-        return ma;
-    }
-
-    public void setMa(Machine ma) {
-        this.ma = ma;
-    }
-
     @Override
     public String toString() {
-        return "Salle{" + "id=" + id + ", code=" + code + '}';
+        return  "code=" + code + '}';
     }
             
 }
