@@ -3,37 +3,40 @@
 1- Ajoute Machine :
 
 
-![ajoute](https://github.com/riadi-1/DBMachine/assets/130598901/7d2f7add-49b5-4d19-95be-cdf580b47bf9)
+![aj](https://github.com/riadi-1/DBMachine/assets/130598901/6eef547e-2014-4aec-9474-aa1a20464bde)
 
 
 Results :
 
+![aj1](https://github.com/riadi-1/DBMachine/assets/130598901/1cb96925-e2e8-4eb7-a436-1d8089205eee)
 
-![ajoute1](https://github.com/riadi-1/DBMachine/assets/130598901/2439ad69-8bf8-4584-a4dd-a0f666b76cb9)
 
 
 2- Modifier Machine :
 
 
-![update](https://github.com/riadi-1/DBMachine/assets/130598901/6a0aaa74-8894-47f7-983c-67d17e37d823)
+![mod](https://github.com/riadi-1/DBMachine/assets/130598901/40173a1d-bb35-44b1-90f5-9974758de1ae)
 
 
 Results :
 
 
-![update1](https://github.com/riadi-1/DBMachine/assets/130598901/16f283bd-e73b-4bb1-b742-4ccbd5a3aaf8)
+![mod1](https://github.com/riadi-1/DBMachine/assets/130598901/f3e00b90-3b5d-4987-a8b6-c5df7cbd4f8c)
+
 
 
 3- Supprimer Machine :
 
 
-![supprimer](https://github.com/riadi-1/DBMachine/assets/130598901/78e484fa-c559-4244-91f5-8201452d0555)
+![sup](https://github.com/riadi-1/DBMachine/assets/130598901/cc16a85c-700e-45e1-b0ad-c559ff3b1086)
+
 
 
 Results :
 
 
-![supprimer1](https://github.com/riadi-1/DBMachine/assets/130598901/460f13f7-a987-469c-a9a6-7f8ce46dc01a)
+![sup1](https://github.com/riadi-1/DBMachine/assets/130598901/bdb45234-b569-4de0-997b-864e5c27f93b)
+
 
 
 ==> Gestion Salle:
@@ -42,34 +45,38 @@ Results :
 4- Ajouter Salle :
 
 
-![ajou](https://github.com/riadi-1/DBMachine/assets/130598901/01accc38-eadc-4e0e-927d-c37d2dd5adaa)
+![ajoute](https://github.com/riadi-1/DBMachine/assets/130598901/01697a37-fef5-4655-8c12-ba746d413416)
+
 
 
 Results :
 
 
-![ajou1](https://github.com/riadi-1/DBMachine/assets/130598901/b8959908-11b2-4054-9ef5-23f93be3b5ac)
+![ajoute1](https://github.com/riadi-1/DBMachine/assets/130598901/c6ede201-8aa7-4cc1-b394-1b8e5c81c2bf)
+
 
 
 5- Modifier Salle :
 
 
-![mod](https://github.com/riadi-1/DBMachine/assets/130598901/335f3924-b0a9-4109-a794-5e4e1c3e2f25)
+![modifier](https://github.com/riadi-1/DBMachine/assets/130598901/5a52048e-a22b-4bbe-ab44-e187120f47ac)
+
 
 
 Results :
 
 
-![mod1](https://github.com/riadi-1/DBMachine/assets/130598901/d2ebf75c-2ef9-4e1f-9140-c6d090d56258)
+![modifier1](https://github.com/riadi-1/DBMachine/assets/130598901/d92c7327-fc17-414f-8916-31741f4d8368)
+
 
 
 6- Supprimer Salle :
 
 
-![sup](https://github.com/riadi-1/DBMachine/assets/130598901/72690247-1d17-4e2e-a7f8-65149d9b71f6)
+![suppremer](https://github.com/riadi-1/DBMachine/assets/130598901/7367c589-833e-4abe-b7ef-78929cace625)
 
 
 Results :
 
 
-![sup1](https://github.com/riadi-1/DBMachine/assets/130598901/ccc3692f-8eb6-4a63-85da-eadfb1a04290)
+![suppremer1](https://github.com/riadi-1/DBMachine/assets/130598901/9803623f-634e-449a-b484-ccd939dcea34)
