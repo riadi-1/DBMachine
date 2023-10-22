@@ -30,6 +30,8 @@ public class ClientMachine {
             IDao<Salle> daos = (IDao<Salle>) Naming.lookup("rmi://localhost:1099/daos");
 //            dao.create(new Machine("RT55", "TOSHIBA", 7000));
            //daos.create(new Salle("s1",Machine("")));
+            System.out.println(dao.findMachinesBySalle(daos.findById(1).getId()));
+
 
         } catch (NotBoundException ex) {
             Logger.getLogger(ClientMachine.class.getName()).log(Level.SEVERE, null, ex);

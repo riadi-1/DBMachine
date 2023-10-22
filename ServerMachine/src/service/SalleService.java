@@ -6,7 +6,7 @@
 package service;
 
 import dao.IDao;
-import entities.Salle;
+import entities.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
@@ -125,5 +125,11 @@ public class SalleService extends UnicastRemoteObject implements IDao<Salle> {
         }
         return salle;
     }
+    
+    @Override
+    public List<Salle> findMachinesBySalle(int id) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
+    
 }

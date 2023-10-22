@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQuery;
 
@@ -20,6 +21,7 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQuery(name = "findAll", query = "from Machine")
 @NamedNativeQuery(name = "findAllNative", query = "select * from machine", resultClass = Machine.class)
+
 public class Machine implements Serializable{
 
     @Id
@@ -28,6 +30,7 @@ public class Machine implements Serializable{
     private String ref;
     private String marque;
     private double prix;
+    @ManyToOne
     private Salle sa;
 
     public Machine() {
